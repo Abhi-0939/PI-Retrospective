@@ -1,0 +1,130 @@
+{
+    "_comment": "Registry of AWC modules in this workspace. Used by orchestrator agent to locate files without guessing. Add new modules here as they are onboarded.",
+    "modules": {
+        "classificationpanelsjs": {
+            "path": "src/thinclient/classificationpanelsjs",
+            "description": "Classification panel — create, view, edit ICOs linked to workspace objects",
+            "primaryServices": [
+                "AwClsCreateFooterService",
+                "classifyNodeService",
+                "classifyService",
+                "classifyUtils",
+                "Ics1ClassificationTabService",
+                "Ics1ClassificationStandAloneService",
+                "classifyDefinesService"
+            ],
+            "stateAtoms": [
+                "classifyState",
+                "searchState"
+            ],
+            "legacyCtxKeys": [
+                "cls_editMode",
+                "cls_saved_date",
+                "classifyTableView",
+                "activeToolsAndInfoCommand"
+            ],
+            "knownPatterns": [
+                "PATTERN-001",
+                "PATTERN-002",
+                "PATTERN-003",
+                "PATTERN-004",
+                "PATTERN-005",
+                "PATTERN-006"
+            ],
+            "soaServices": [
+                "Internal-IcsAw-2018-12-Classification/saveClassificationObjects2",
+                "Internal-IcsAw-2019-12-Classification/findClassificationInfo2",
+                "Internal-IcsAw-2019-12-Classification/getClassificationObjects"
+            ]
+        },
+        "classificationadminjs": {
+            "path": "src/thinclient/classificationadminjs",
+            "description": "Classification administration — manage classification hierarchy in AWC",
+            "primaryServices": [],
+            "stateAtoms": [],
+            "legacyCtxKeys": [],
+            "knownPatterns": [],
+            "soaServices": []
+        },
+        "occmgmtjs": {
+            "path": "src/thinclient/occmgmtjs",
+            "description": "Occurrence Management — BOM structure viewer and editor (ACE)",
+            "primaryServices": [
+                "aceTreeTableDataService",
+                "aceUrlManagementService",
+                "occmgmtTreeLoadService"
+            ],
+            "stateAtoms": [
+                "occContext",
+                "viewTuple"
+            ],
+            "legacyCtxKeys": [
+                "splitView",
+                "sublocation"
+            ],
+            "knownPatterns": [
+                "PATTERN-007"
+            ],
+            "soaServices": [
+                "Internal-ActiveWorkspaceBom-2019-12-OccurrenceManagement/getOccurrences4"
+            ]
+        },
+        "resourcemanager": {
+            "path": "src/thinclient/resourcemanager",
+            "description": "Manufacturing Resource Manager — Resource graph and tree views for manufacturing assemblies",
+            "primaryServices": [
+                "MrmOccmgmtResourceLoadResultBuilder",
+                "MrmResourceGraphUtils",
+                "MrmOccmgmtGetOccsResponseService"
+            ],
+            "stateAtoms": [
+                "occContext"
+            ],
+            "legacyCtxKeys": [
+                "ViewModeContext"
+            ],
+            "knownPatterns": [
+                "PATTERN-007"
+            ],
+            "soaServices": []
+        },
+        "buildcombinations": {
+            "path": "src/thinclient/buildcombinations",
+            "description": "Build Combinations — compute and manage build combination coverage in ACE",
+            "primaryServices": [
+                "buildCombinationsService"
+            ],
+            "stateAtoms": [
+                "occContext"
+            ],
+            "legacyCtxKeys": [],
+            "knownPatterns": [],
+            "soaServices": [
+                "Internal-Smc1Aw-2022-06-BuildCombinations/computeCoverage"
+            ]
+        },
+        "workflowcommandpanelsjs": {
+            "path": "src/thinclient/workflowcommandpanelsjs",
+            "description": "Workflow command panels — submit, perform, and manage TC workflow tasks",
+            "primaryServices": [],
+            "stateAtoms": [],
+            "legacyCtxKeys": [],
+            "knownPatterns": [],
+            "soaServices": [
+                "Workflow-2014-12-Workflow/performAction",
+                "Workflow-2023-05-Workflow/startWorkflow2"
+            ]
+        },
+        "searchjs": {
+            "path": "src/thinclient/searchjs",
+            "description": "Search — full-text and saved search panels",
+            "primaryServices": [],
+            "stateAtoms": [
+                "searchState"
+            ],
+            "legacyCtxKeys": [],
+            "knownPatterns": [],
+            "soaServices": []
+        }
+    }
+}
